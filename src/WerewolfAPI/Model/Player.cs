@@ -111,7 +111,7 @@ namespace WerewolfAPI.Model
         public Player(long? Id = default(long?), string Name = default(string), string Password = default(string), Game Game = default(Game), Role Role = default(Role), string Session = default(string), StatusEnum Status = default(StatusEnum))
         {
             // to ensure "Name" is required (not null)
-            if (Name == null)
+            if (Name == null || Name == "")
             {
                 throw new InvalidDataException("Name is a required property for Player and cannot be null");
             }
@@ -120,7 +120,7 @@ namespace WerewolfAPI.Model
                 this.Name = Name;
             }
             // to ensure "Password" is required (not null)
-            if (Password == null)
+            if (Password == null || Password == "")
             {
                 throw new InvalidDataException("Password is a required property for Player and cannot be null");
             }
