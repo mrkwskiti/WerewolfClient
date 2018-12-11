@@ -105,6 +105,7 @@
     <Content Include="Resources\Icon_alpha_werewolf.png" />
     <Content Include="Resources\Icon_aura_seer.png" />
     <Content Include="Resources\Icon_bodyguard.png" />
+    <None Include="Resources\Icon_dead.png" />
     <Content Include="Resources\Icon_doctor.png" />
     <Content Include="Resources\Icon_fool.png" />
     <Content Include="Resources\Icon_gunner.png" />
@@ -118,7 +119,6 @@
     <Content Include="Resources\Icon_werewolf.png" />
     <Content Include="Resources\Icon_wolf_seer.png" />
     <Content Include="Resources\Icon_wolf_shaman.png" />
-    <None Include="Resources\Icon_dead.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
