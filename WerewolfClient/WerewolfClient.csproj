@@ -118,6 +118,7 @@
     <Content Include="Resources\Icon_werewolf.png" />
     <Content Include="Resources\Icon_wolf_seer.png" />
     <Content Include="Resources\Icon_wolf_shaman.png" />
+    <None Include="Resources\Icon_dead.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
