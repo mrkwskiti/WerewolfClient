@@ -305,6 +305,7 @@
             this.buttonwerewolf.TabIndex = 1;
             this.buttonwerewolf.Text = "       werewolf";
             this.buttonwerewolf.UseVisualStyleBackColor = true;
+            this.buttonwerewolf.Click += new System.EventHandler(this.buttonwerewolf_Click);
             // 
             // label1
             // 
@@ -349,6 +350,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "Rule";
             this.Text = "Rule";
+            this.Load += new System.EventHandler(this.Rule_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
