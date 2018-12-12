@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace WerewolfClient
 {
-    class RuleController
+    class RuleController : Controller
     {
+        private RuleController()
+        {
+
+        }
     }
 }
