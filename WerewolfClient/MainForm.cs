@@ -74,18 +74,25 @@ namespace WerewolfClient
                     // FIXME, need to optimize this
                     Image img = Properties.Resources.Icon_villager;
                     string role;
-                    if (player.Name == wm.Player.Name)
+                    if (player.Status != Player.StatusEnum.Alive)
                     {
-                        role = _myRole;
+                        role = "dead";
                     }
-                    else if (player.Role != null)
+                    else 
                     {
-                        role = player.Role.Name;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                        if (player.Name == wm.Player.Name)
+                        {
+                            role = _myRole;
+                        }
+                        else if (player.Role != null)
+                        {
+                            role = player.Role.Name;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    } 
                     switch (role)
                     {
                         case WerewolfModel.ROLE_SEER:
@@ -133,6 +140,9 @@ namespace WerewolfClient
                         case WerewolfModel.ROLE_GUNNER:
                             img = Properties.Resources.Icon_gunner;
                             break;
+                        default:
+                            img = Properties.Resources.Icon_dead;
+                            break;
                     }
                     ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
                 }
@@ -161,6 +171,7 @@ namespace WerewolfClient
                         }
                         break;
                     case EventEnum.GameStopped:
+                        UpdateAvatar(wm);
                         AddChatMessage("Game is finished, outcome is " + wm.EventPayloads["Game.Outcome"]);
                         _updateTimer.Enabled = false;
                         break;
