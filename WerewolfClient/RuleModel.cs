@@ -113,6 +113,7 @@ namespace WerewolfClient
                     break;
 
             }
+            NotifyAll();
         }
 
     }
