@@ -41,7 +41,7 @@ namespace WerewolfClient
                     case WerewolfModel.EventEnum.SignUp:
                         if (wm.EventPayloads["Success"] == "True")
                         {
-                            MessageBox.Show("Sign up successfuly, please login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            MessageBox.Show("Sign up successfuly, please login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);        //fix messageboxicon from warning to information
                         }
                         else
                         {
