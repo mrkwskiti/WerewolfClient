@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WerewolfClient
 {
-    public partial class Rule : Form
+    public partial class Rule : Form, View
     {
+        private RuleController controller;
         public Rule()
         {
             InitializeComponent();
+        }
+        public void Notify(Model m)
+        {
+
+        }
+
+        public void setController(Controller c)
+        {
+            controller = (RuleController)c;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
