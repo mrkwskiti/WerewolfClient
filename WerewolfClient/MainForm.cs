@@ -395,25 +395,33 @@ namespace WerewolfClient
                 // Nothing to do here;
                 return;
             }
-            if (_actionActivated)
+            try
             {
-                _actionActivated = false;
-                BtnAction.BackColor = Button.DefaultBackColor;
-                AddChatMessage("You perform [" + BtnAction.Text + "] on " + players[index].Name);
-                WerewolfCommand wcmd = new WerewolfCommand();
-                wcmd.Action = CommandEnum.Action;
-                wcmd.Payloads = new Dictionary<string, string>() { { "Target", players[index].Id.ToString() } };
-                controller.ActionPerformed(wcmd);
+                if (_actionActivated)
+                {
+                    _actionActivated = false;
+                    BtnAction.BackColor = Button.DefaultBackColor;
+                    AddChatMessage("You perform [" + BtnAction.Text + "] on " + players[index].Name);
+                    WerewolfCommand wcmd = new WerewolfCommand();
+                    wcmd.Action = CommandEnum.Action;
+                    wcmd.Payloads = new Dictionary<string, string>() { { "Target", players[index].Id.ToString() } };
+                    controller.ActionPerformed(wcmd);
+                }
+                if (_voteActivated)
+                {
+                    _voteActivated = false;
+                    BtnVote.BackColor = Button.DefaultBackColor;
+                    AddChatMessage("You vote on " + players[index].Name);
+                    WerewolfCommand wcmd = new WerewolfCommand();
+                    wcmd.Action = CommandEnum.Vote;
+                    wcmd.Payloads = new Dictionary<string, string>() { { "Target", players[index].Id.ToString() } };
+                    controller.ActionPerformed(wcmd);
+                }
             }
-            if (_voteActivated)
+            catch(Exception ex)
             {
-                _voteActivated = false;
-                BtnVote.BackColor = Button.DefaultBackColor;
-                AddChatMessage("You vote on " + players[index].Name);
-                WerewolfCommand wcmd = new WerewolfCommand();
-                wcmd.Action = CommandEnum.Vote;
-                wcmd.Payloads = new Dictionary<string, string>() { { "Target", players[index].Id.ToString() } };
-                controller.ActionPerformed(wcmd);
+                AddChatMessage("You can't action/vote on this players.");
+                Console.WriteLine(ex.ToString());
             }
         }
 
