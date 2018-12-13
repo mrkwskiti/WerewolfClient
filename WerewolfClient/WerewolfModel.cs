@@ -58,6 +58,7 @@ namespace WerewolfClient
             Alive = 15,
             Chat = 16,
             ChatMessage = 17,
+            Waiting = 18,
         }
         public const string ROLE_SEER = "Seer";
         public const string ROLE_AURA_SEER = "Aura Seer";
@@ -137,6 +138,7 @@ namespace WerewolfClient
         {
             lock (this)
             {
+
                 try
                 {
                     _game = _gameEP.GetGameById(_game.Id);
@@ -147,6 +149,16 @@ namespace WerewolfClient
                 {
                     Console.WriteLine(ex.Message);
                     return;
+                }
+                if (_game.Status == Game.StatusEnum.Waiting)
+                {
+                    _event = EventEnum.Waiting;
+                    int n = 0;
+                    foreach(Player m in _players)
+                    {
+                        n++;
+                    }
+                    _eventPayloads["Game.count"] = n.ToString();
                 }
                 if (!_isPlaying)
                 {
