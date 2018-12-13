@@ -26,6 +26,7 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private List<Player> players = null;
+        private List<string> everDead = new List<string> { "" };
         public MainForm()
         {
             InitializeComponent();
@@ -141,6 +142,27 @@ namespace WerewolfClient
                             img = Properties.Resources.Icon_gunner;
                             break;
                         default:
+                            bool ever=false;
+                            foreach(string n in everDead)
+                            {
+                                if(player.Name == n)
+                                {
+                                    ever = true;
+                                    break;
+                                }
+                            }
+                            everDead.Add(player.Name);
+                            if (!ever)
+                            {
+                                if (player.Name == wm.Player.Name)
+                                {
+                                    AddChatMessage("You are dead !!!");
+                                }
+                                else
+                                {
+                                    AddChatMessage(player.Name + " is dead !!!");
+                                }
+                            }
                             img = Properties.Resources.Icon_dead;
                             break;
                     }
@@ -277,6 +299,7 @@ namespace WerewolfClient
                         {
                             _isDead = false;
                         }
+                        everDead.Remove(wm.EventPayloads["Game.Target.Name"]); // for revived
                         break;
                     case EventEnum.ChatMessage:
                         if (wm.EventPayloads["Success"] == WerewolfModel.TRUE)
