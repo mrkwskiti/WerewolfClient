@@ -26,7 +26,10 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private List<Player> players = null;
+        private int now;
+        private int pre = 17;
         private List<string> everDead = new List<string> { "" };
+
         public MainForm()
         {
             InitializeComponent();
@@ -325,6 +328,20 @@ namespace WerewolfClient
                                     AddChatMessage("You're not allow to talk now, go to sleep.");
                                     break;
                             }
+                        }
+                        break;
+                    case EventEnum.Waiting: 
+                        int.TryParse( wm.EventPayloads["Game.count"], out now);
+                        if (now != pre)
+                        {
+                            AddChatMessage("Player in game ("+now+"/2)...");
+                            int i = 1;
+                            foreach(Player check in wm.Players)
+                            {
+                                AddChatMessage("Player "+i+"=["+check.Name+"]");
+                                i++;
+                            }
+                            pre = now;
                         }
                         break;
                 }
