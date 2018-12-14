@@ -381,7 +381,7 @@ namespace WerewolfClient
             {
                 InitilizeModel(server);
                 Player p = new Player(null, login, password, null, null, null, Player.StatusEnum.Offline);
-                _player = _playerEP.LoginPlayer(p);
+                _player = _playerEP.LoginPlayer(p);                
                 Console.WriteLine(_player.Session);
                 _event = EventEnum.SignIn;
                 _eventPayloads["Success"] = TRUE;
@@ -399,11 +399,13 @@ namespace WerewolfClient
             try
             {
                 PlayerApi playerEP = new PlayerApi(server);
+                InitilizeModel(server);
                 Player p = new Player(null, login, password, null, null, null, Player.StatusEnum.Offline);
                 _player = playerEP.AddPlayer(p);
 
+
                 Console.WriteLine(_player.Id);
-                _event = EventEnum.SignIn;
+                _event = EventEnum.SignUp;       //Show sign up message box
                 _eventPayloads["Success"] = TRUE;
             } catch (Exception ex)
             {
