@@ -26,6 +26,7 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private List<Player> players = null;
+        private List<string> everDead = new List<string> { "" };
         public MainForm()
         {
             InitializeComponent();
@@ -74,18 +75,25 @@ namespace WerewolfClient
                     // FIXME, need to optimize this
                     Image img = Properties.Resources.Icon_villager;
                     string role;
-                    if (player.Name == wm.Player.Name)
+                    if (player.Status != Player.StatusEnum.Alive)
                     {
-                        role = _myRole;
+                        role = "dead";
                     }
-                    else if (player.Role != null)
+                    else 
                     {
-                        role = player.Role.Name;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                        if (player.Name == wm.Player.Name)
+                        {
+                            role = _myRole;
+                        }
+                        else if (player.Role != null)
+                        {
+                            role = player.Role.Name;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    } 
                     switch (role)
                     {
                         case WerewolfModel.ROLE_SEER:
@@ -133,6 +141,30 @@ namespace WerewolfClient
                         case WerewolfModel.ROLE_GUNNER:
                             img = Properties.Resources.Icon_gunner;
                             break;
+                        default:
+                            bool ever=false;
+                            foreach(string n in everDead)
+                            {
+                                if(player.Name == n)
+                                {
+                                    ever = true;
+                                    break;
+                                }
+                            }
+                            everDead.Add(player.Name);
+                            if (!ever)
+                            {
+                                if (player.Name == wm.Player.Name)
+                                {
+                                    AddChatMessage("You are dead !!!");
+                                }
+                                else
+                                {
+                                    AddChatMessage(player.Name + " is dead !!!");
+                                }
+                            }
+                            img = Properties.Resources.Icon_dead;
+                            break;
                     }
                     ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
                 }
@@ -161,6 +193,7 @@ namespace WerewolfClient
                         }
                         break;
                     case EventEnum.GameStopped:
+                        UpdateAvatar(wm);
                         AddChatMessage("Game is finished, outcome is " + wm.EventPayloads["Game.Outcome"]);
                         _updateTimer.Enabled = false;
                         break;
@@ -266,6 +299,7 @@ namespace WerewolfClient
                         {
                             _isDead = false;
                         }
+                        everDead.Remove(wm.EventPayloads["Game.Target.Name"]); // for revived
                         break;
                     case EventEnum.ChatMessage:
                         if (wm.EventPayloads["Success"] == WerewolfModel.TRUE)
@@ -361,25 +395,33 @@ namespace WerewolfClient
                 // Nothing to do here;
                 return;
             }
-            if (_actionActivated)
+            try
             {
-                _actionActivated = false;
-                BtnAction.BackColor = Button.DefaultBackColor;
-                AddChatMessage("You perform [" + BtnAction.Text + "] on " + players[index].Name);
-                WerewolfCommand wcmd = new WerewolfCommand();
-                wcmd.Action = CommandEnum.Action;
-                wcmd.Payloads = new Dictionary<string, string>() { { "Target", players[index].Id.ToString() } };
-                controller.ActionPerformed(wcmd);
+                if (_actionActivated)
+                {
+                    _actionActivated = false;
+                    BtnAction.BackColor = Button.DefaultBackColor;
+                    AddChatMessage("You perform [" + BtnAction.Text + "] on " + players[index].Name);
+                    WerewolfCommand wcmd = new WerewolfCommand();
+                    wcmd.Action = CommandEnum.Action;
+                    wcmd.Payloads = new Dictionary<string, string>() { { "Target", players[index].Id.ToString() } };
+                    controller.ActionPerformed(wcmd);
+                }
+                if (_voteActivated)
+                {
+                    _voteActivated = false;
+                    BtnVote.BackColor = Button.DefaultBackColor;
+                    AddChatMessage("You vote on " + players[index].Name);
+                    WerewolfCommand wcmd = new WerewolfCommand();
+                    wcmd.Action = CommandEnum.Vote;
+                    wcmd.Payloads = new Dictionary<string, string>() { { "Target", players[index].Id.ToString() } };
+                    controller.ActionPerformed(wcmd);
+                }
             }
-            if (_voteActivated)
+            catch(Exception ex)
             {
-                _voteActivated = false;
-                BtnVote.BackColor = Button.DefaultBackColor;
-                AddChatMessage("You vote on " + players[index].Name);
-                WerewolfCommand wcmd = new WerewolfCommand();
-                wcmd.Action = CommandEnum.Vote;
-                wcmd.Payloads = new Dictionary<string, string>() { { "Target", players[index].Id.ToString() } };
-                controller.ActionPerformed(wcmd);
+                AddChatMessage("You can't action/vote on this players.");
+                Console.WriteLine(ex.ToString());
             }
         }
 
