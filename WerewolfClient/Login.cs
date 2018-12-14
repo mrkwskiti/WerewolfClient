@@ -13,7 +13,6 @@ namespace WerewolfClient
     public partial class Login : Form, View
     {
         WindowsMediaPlayer player = new WindowsMediaPlayer();
-        WindowsMediaPlayer button = new WindowsMediaPlayer();
         private WerewolfController controller;
         private Form _mainForm;
         public Login(Form MainForm)
@@ -62,16 +61,16 @@ namespace WerewolfClient
 
         private void BtnSignIn_Click(object sender, EventArgs e)
         {
-            button.URL = "Nintendo Switch - Old Click Sound Effect !.mp3";
+            player.URL = "mix.mp3";
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignIn;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text }, { "Password", TbPassword.Text }, { "Server", TBServer.Text } };
-            controller.ActionPerformed(wcmd);
+            controller.ActionPerformed(wcmd);           
         }
 
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
-            button.URL = "Nintendo Switch - Old Click Sound Effect !.mp3";
+            player.URL = "mix.mp3";
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignUp;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text}, { "Password",TbPassword.Text}, { "Server", TBServer.Text } };
@@ -82,5 +81,7 @@ namespace WerewolfClient
         {
             
         }
+
+      
     }
 }
