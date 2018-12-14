@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,9 +41,11 @@
             this.TBServer = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +76,7 @@
             // 
             this.TbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbLogin.Location = new System.Drawing.Point(412, 265);
-            this.TbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TbLogin.Margin = new System.Windows.Forms.Padding(4);
             this.TbLogin.Name = "TbLogin";
             this.TbLogin.Size = new System.Drawing.Size(363, 34);
             this.TbLogin.TabIndex = 2;
@@ -82,7 +85,7 @@
             // 
             this.TbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbPassword.Location = new System.Drawing.Point(412, 336);
-            this.TbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.TbPassword.Name = "TbPassword";
             this.TbPassword.PasswordChar = '*';
             this.TbPassword.Size = new System.Drawing.Size(363, 34);
@@ -94,7 +97,7 @@
             this.BtnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSignIn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnSignIn.Location = new System.Drawing.Point(611, 407);
-            this.BtnSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSignIn.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSignIn.Name = "BtnSignIn";
             this.BtnSignIn.Size = new System.Drawing.Size(125, 55);
             this.BtnSignIn.TabIndex = 4;
@@ -108,7 +111,7 @@
             this.BtnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSignUp.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnSignUp.Location = new System.Drawing.Point(447, 407);
-            this.BtnSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSignUp.Name = "BtnSignUp";
             this.BtnSignUp.Size = new System.Drawing.Size(125, 55);
             this.BtnSignUp.TabIndex = 5;
@@ -120,7 +123,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(510, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(114, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,7 +146,7 @@
             // 
             this.TBServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBServer.Location = new System.Drawing.Point(412, 194);
-            this.TBServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBServer.Margin = new System.Windows.Forms.Padding(4);
             this.TBServer.Name = "TBServer";
             this.TBServer.Size = new System.Drawing.Size(363, 34);
             this.TBServer.TabIndex = 8;
@@ -185,12 +188,14 @@
             this.Controls.Add(this.TbLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +214,6 @@
         private System.Windows.Forms.TextBox TBServer;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

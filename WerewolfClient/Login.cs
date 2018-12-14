@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WMPLib;
 namespace WerewolfClient
 {
     public partial class Login : Form, View
     {
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
         private WerewolfController controller;
         private Form _mainForm;
         public Login(Form MainForm)
         {
             InitializeComponent();
+            player.URL = "(No Copyright) Inspirational and Cinematic Backgro - by ASha.mp3";
             _mainForm = MainForm;
         }
 
@@ -76,6 +78,11 @@ namespace WerewolfClient
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            player.controls.play();  //background music
         }
     }
 }
