@@ -174,7 +174,7 @@ namespace WerewolfAPI.Model
             set
             {
                 // to ensure "Password" is required (not null)
-                if (value == null || value == "")
+                if (value == null)
                 {
                     throw new InvalidDataException("Password is a required property for Player and cannot be null");
                 }
