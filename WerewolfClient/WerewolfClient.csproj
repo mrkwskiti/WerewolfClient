@@ -140,8 +140,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\%28No Copyright%29 Inspirational and Cinematic Backgro - by ASha.wav" />
-    <None Include="bin\Debug\mix.wav" />
+    <None Include="Resources\%28No Copyright%29 Inspirational and Cinematic Backgro - by ASha.wav" />
+    <None Include="Resources\mix.wav" />
     <Content Include="Resources\Icon_alpha_werewolf.png" />
     <Content Include="Resources\Icon_aura_seer.png" />
     <Content Include="Resources\Icon_bodyguard.png" />
@@ -158,6 +158,9 @@
     <Content Include="Resources\Icon_werewolf.png" />
     <Content Include="Resources\Icon_wolf_seer.png" />
     <Content Include="Resources\Icon_wolf_shaman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
