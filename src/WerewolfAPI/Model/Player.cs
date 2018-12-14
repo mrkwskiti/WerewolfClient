@@ -91,8 +91,10 @@ namespace WerewolfAPI.Model
         /// Player status in a game
         /// </summary>
         /// <value>Player status in a game</value>
+        /// 
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum Status { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Player" /> class.
         /// </summary>
@@ -110,24 +112,6 @@ namespace WerewolfAPI.Model
         /// <param name="Status">Player status in a game (required).</param>
         public Player(long? Id = default(long?), string Name = default(string), string Password = default(string), Game Game = default(Game), Role Role = default(Role), string Session = default(string), StatusEnum Status = default(StatusEnum))
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null || Name == "")
-            {
-                throw new InvalidDataException("Name is a required property for Player and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            // to ensure "Password" is required (not null)
-            if (Password == null || Password == "")
-            {
-                throw new InvalidDataException("Password is a required property for Player and cannot be null");
-            }
-            else
-            {
-                this.Password = Password;
-            }
             // to ensure "Status" is required (not null)
             if (Status == null)
             {
@@ -137,6 +121,8 @@ namespace WerewolfAPI.Model
             {
                 this.Status = Status;
             }
+            this.Name = Name;
+            this.Password = Password;
             this.Id = Id;
             this.Game = Game;
             this.Role = Role;
@@ -152,14 +138,49 @@ namespace WerewolfAPI.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// 
+        private string _name;
+        [DataMember(Name = "name", EmitDefaultValue = false)]
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                // to ensure "Name" is required (not null)
+                if (value == null || value == "")
+                {
+                    throw new InvalidDataException("Name is a required property for Player and cannot be null");
+                }
+                _name = value;
+            }
+        }
+
 
         /// <summary>
         /// Gets or Sets Password
         /// </summary>
+        /// 
+        private string _password;
         [DataMember(Name="password", EmitDefaultValue=false)]
-        public string Password { get; set; }
+        public string Password
+        {
+            get
+            {
+                return _password;
+            }
+            set
+            {
+                // to ensure "Password" is required (not null)
+                if (value == null || value == "")
+                {
+                    throw new InvalidDataException("Password is a required property for Player and cannot be null");
+                }
+                _password = value;
+            }
+        }
 
         /// <summary>
         /// Gets or Sets Game
