@@ -140,6 +140,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\%28No Copyright%29 Inspirational and Cinematic Backgro - by ASha.wav" />
+    <None Include="bin\Debug\mix.wav" />
     <Content Include="Resources\Icon_alpha_werewolf.png" />
     <Content Include="Resources\Icon_aura_seer.png" />
     <Content Include="Resources\Icon_bodyguard.png" />

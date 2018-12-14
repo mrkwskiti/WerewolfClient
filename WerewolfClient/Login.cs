@@ -18,7 +18,7 @@ namespace WerewolfClient
         public Login(Form MainForm)
         {
             InitializeComponent();
-            player.URL = "(No Copyright) Inspirational and Cinematic Backgro - by ASha.mp3";
+            player.URL = "(No Copyright) Inspirational and Cinematic Backgro - by ASha.wav";
             _mainForm = MainForm;
         }
 
@@ -61,7 +61,7 @@ namespace WerewolfClient
 
         private void BtnSignIn_Click(object sender, EventArgs e)
         {
-            player.URL = "mix.mp3";
+            player.URL = "mix.wav";
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignIn;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text }, { "Password", TbPassword.Text }, { "Server", TBServer.Text } };
@@ -70,7 +70,7 @@ namespace WerewolfClient
 
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
-            player.URL = "mix.mp3";
+            player.URL = "mix.wav";
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignUp;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text}, { "Password",TbPassword.Text}, { "Server", TBServer.Text } };
