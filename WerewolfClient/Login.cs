@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WMPLib;
 namespace WerewolfClient
 {
     public partial class Login : Form, View
     {
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
         private WerewolfController controller;
         private Form _mainForm;
         public Login(Form MainForm)
         {
             InitializeComponent();
+            player.URL = "(No Copyright) Inspirational and Cinematic Backgro - by ASha.wav";
             _mainForm = MainForm;
         }
 
@@ -55,14 +57,16 @@ namespace WerewolfClient
 
         private void BtnSignIn_Click(object sender, EventArgs e)
         {
+            player.URL = "mix.wav";
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignIn;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text }, { "Password", TbPassword.Text }, { "Server", TBServer.Text } };
-            controller.ActionPerformed(wcmd);
+            controller.ActionPerformed(wcmd);           
         }
 
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
+            player.URL = "mix.wav";
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignUp;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text}, { "Password",TbPassword.Text}, { "Server", TBServer.Text } };

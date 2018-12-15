@@ -61,6 +61,15 @@ namespace WerewolfClient.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _No_Copyright__Inspirational_and_Cinematic_Backgro___by_ASha {
+            get {
+                return ResourceManager.GetStream("_No_Copyright__Inspirational_and_Cinematic_Backgro___by_ASha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Icon_alpha_werewolf {
@@ -227,6 +236,15 @@ namespace WerewolfClient.Properties {
             get {
                 object obj = ResourceManager.GetObject("Icon_wolf_shaman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream mix {
+            get {
+                return ResourceManager.GetStream("mix", resourceCulture);
             }
         }
     }

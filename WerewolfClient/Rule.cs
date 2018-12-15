@@ -31,5 +31,15 @@ namespace WerewolfClient
         {
 
         }
+
+        private void Rule_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonwerewolf_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
