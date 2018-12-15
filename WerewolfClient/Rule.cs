@@ -21,7 +21,7 @@ namespace WerewolfClient
             setController(new RuleController());
             model.AttachObserver(this);
             controller.AddModel(model);
-
+            Notify(model);
         }
         public void Notify(Model m)
         {
@@ -52,6 +52,9 @@ namespace WerewolfClient
                     break;
                 case "btnAlpha_werewolf":
                     rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.ALPHA_WEREWOLF } };
+                    break;
+                case "btnWerewolf_seer":
+                    rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.WEREWOLF_SEER } };
                     break;
                 case "btnSeer":
                     rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.SEER } };
