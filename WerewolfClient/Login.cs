@@ -41,11 +41,7 @@ namespace WerewolfClient
                         }
                         break;
                     case WerewolfModel.EventEnum.SignUp:
-                        if (wm.EventPayloads["Success"] == "True")
-                        {
-                            MessageBox.Show("Sign up successfuly, please login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                        }
-                        else
+                        if (wm.EventPayloads["Success"] == "False")
                         {
                             MessageBox.Show("Login or password incorrect, please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
@@ -79,9 +75,7 @@ namespace WerewolfClient
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
-        }
 
-      
+        }
     }
 }

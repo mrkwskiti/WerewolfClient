@@ -127,6 +127,9 @@
   <data name="Icon_bodyguard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_bodyguard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon_doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -167,9 +170,9 @@
     <value>..\Resources\Icon_wolf_shaman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mix" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\mix.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\mix.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="_No_Copyright__Inspirational_and_Cinematic_Backgro___by_ASha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\(No Copyright) Inspirational and Cinematic Backgro - by ASha.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>..\Resources\(No Copyright) Inspirational and Cinematic Backgro - by ASha.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

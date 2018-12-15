@@ -1013,6 +1013,8 @@ namespace WerewolfAPI.Api
         public Player LoginPlayer (Player body)
         {
              ApiResponse<Player> localVarResponse = LoginPlayerWithHttpInfo(body);
+            if (localVarResponse.Data.Id == null)
+                throw new ApiException(404, "Username or password has not match in database");
              return localVarResponse.Data;
         }
 
