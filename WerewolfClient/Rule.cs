@@ -21,10 +21,11 @@ namespace WerewolfClient
             setController(new RuleController());
             model.AttachObserver(this);
             controller.AddModel(model);
+
         }
         public void Notify(Model m)
         {
-
+            lblRule.Text = ((RuleModel)model).GetRule();
         }
 
         private void setModel(Model m)
@@ -32,12 +33,12 @@ namespace WerewolfClient
             model = (RuleModel)m;
         }
 
-        private void setController(Controller c)
+        public void setController(Controller c)
         {
             controller = (RuleController)c;
         }
 
-        private void btnGetRule_click(object sender, PaintEventArgs e)
+        private void btnGetRule_Clicked(object sender, EventArgs e)
         {
             RuleCommand rcmd = new RuleCommand();
             rcmd.Action = RuleCommand.CommandEnum.GetRule;
@@ -53,7 +54,7 @@ namespace WerewolfClient
                     rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.ALPHA_WEREWOLF } };
                     break;
                 case "btnSeer":
-                    rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.SEER} };
+                    rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.SEER } };
                     break;
                 case "btnAura_seer":
                     rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.AURA_SEER } };
@@ -65,10 +66,10 @@ namespace WerewolfClient
                     rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.DOCTOR } };
                     break;
                 case "btnPriest":
-                    rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.PRIEST} };
+                    rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.PRIEST } };
                     break;
                 case "btnMedium":
-                    rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.MEDIUM} };
+                    rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.MEDIUM } };
                     break;
                 case "btnHead_hunter":
                     rcmd.Payloads = new Dictionary<string, string> { { "Character", RuleModel.HEAD_HUNTER } };
@@ -88,6 +89,5 @@ namespace WerewolfClient
             }
             controller.ActionPerformed(rcmd);
         }
-
     }
 }

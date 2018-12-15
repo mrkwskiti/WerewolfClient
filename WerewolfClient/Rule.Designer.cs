@@ -49,8 +49,10 @@
             this.btnWerewolf = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblRule = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelleft.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -90,6 +92,7 @@
             // 
             // panelleft
             // 
+            this.panelleft.Controls.Add(this.lblRule);
             this.panelleft.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelleft.Location = new System.Drawing.Point(567, 0);
             this.panelleft.Name = "panelleft";
@@ -109,6 +112,7 @@
             this.btnSeer.TabIndex = 15;
             this.btnSeer.Text = "    seer";
             this.btnSeer.UseVisualStyleBackColor = true;
+            this.btnSeer.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btngunner
             // 
@@ -123,6 +127,7 @@
             this.btngunner.TabIndex = 9;
             this.btngunner.Text = "   Gunner";
             this.btngunner.UseVisualStyleBackColor = true;
+            this.btngunner.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnAura_seer
             // 
@@ -138,6 +143,7 @@
             this.btnAura_seer.Text = "Aura seer";
             this.btnAura_seer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAura_seer.UseVisualStyleBackColor = true;
+            this.btnAura_seer.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // button8
             // 
@@ -153,6 +159,7 @@
             this.button8.Text = "     Serial killer";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnpriest
             // 
@@ -167,6 +174,7 @@
             this.btnpriest.TabIndex = 13;
             this.btnpriest.Text = "   Priest";
             this.btnpriest.UseVisualStyleBackColor = true;
+            this.btnpriest.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnHead_humter
             // 
@@ -181,6 +189,7 @@
             this.btnHead_humter.TabIndex = 6;
             this.btnHead_humter.Text = "        Head hunter";
             this.btnHead_humter.UseVisualStyleBackColor = true;
+            this.btnHead_humter.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnBodyguard
             // 
@@ -196,6 +205,7 @@
             this.btnBodyguard.Text = "Bodyguard";
             this.btnBodyguard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBodyguard.UseVisualStyleBackColor = true;
+            this.btnBodyguard.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnMedium
             // 
@@ -210,6 +220,7 @@
             this.btnMedium.TabIndex = 7;
             this.btnMedium.Text = "     Medium";
             this.btnMedium.UseVisualStyleBackColor = true;
+            this.btnMedium.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnFool
             // 
@@ -224,6 +235,7 @@
             this.btnFool.TabIndex = 11;
             this.btnFool.Text = "   Fool";
             this.btnFool.UseVisualStyleBackColor = true;
+            this.btnFool.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnLailer
             // 
@@ -238,6 +250,7 @@
             this.btnLailer.TabIndex = 10;
             this.btnLailer.Text = "   Jailer";
             this.btnLailer.UseVisualStyleBackColor = true;
+            this.btnLailer.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnDoctor
             // 
@@ -252,6 +265,7 @@
             this.btnDoctor.TabIndex = 5;
             this.btnDoctor.Text = "   Doctor";
             this.btnDoctor.UseVisualStyleBackColor = true;
+            this.btnDoctor.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnWerewolf_seer
             // 
@@ -267,6 +281,7 @@
             this.btnWerewolf_seer.Text = "werewolf seer";
             this.btnWerewolf_seer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnWerewolf_seer.UseVisualStyleBackColor = true;
+            this.btnWerewolf_seer.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnWerewolf_shaman
             // 
@@ -283,6 +298,7 @@
             this.btnWerewolf_shaman.Text = " werewolf shaman";
             this.btnWerewolf_shaman.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnWerewolf_shaman.UseVisualStyleBackColor = true;
+            this.btnWerewolf_shaman.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnAlpha_werewolf
             // 
@@ -298,6 +314,7 @@
             this.btnAlpha_werewolf.Text = "Alpha werewolf";
             this.btnAlpha_werewolf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlpha_werewolf.UseVisualStyleBackColor = true;
+            this.btnAlpha_werewolf.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // btnWerewolf
             // 
@@ -312,6 +329,7 @@
             this.btnWerewolf.TabIndex = 1;
             this.btnWerewolf.Text = "       werewolf";
             this.btnWerewolf.UseVisualStyleBackColor = true;
+            this.btnWerewolf.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // label1
             // 
@@ -323,6 +341,7 @@
             this.label1.Size = new System.Drawing.Size(148, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Character";
+            this.label1.Click += new System.EventHandler(this.btnGetRule_Clicked);
             // 
             // button1
             // 
@@ -335,6 +354,16 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "How to play";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblRule
+            // 
+            this.lblRule.AutoSize = true;
+            this.lblRule.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRule.Location = new System.Drawing.Point(52, 53);
+            this.lblRule.Name = "lblRule";
+            this.lblRule.Size = new System.Drawing.Size(32, 17);
+            this.lblRule.TabIndex = 0;
+            this.lblRule.Text = "rule";
             // 
             // Rule
             // 
@@ -350,6 +379,8 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panelleft.ResumeLayout(false);
+            this.panelleft.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -375,5 +406,6 @@
         private System.Windows.Forms.Button btnWerewolf_shaman;
         private System.Windows.Forms.Button btnAlpha_werewolf;
         private System.Windows.Forms.Panel panelleft;
+        private System.Windows.Forms.Label lblRule;
     }
 }

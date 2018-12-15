@@ -62,6 +62,11 @@ namespace WerewolfClient
             lblShowRule = null;
         }
 
+        public string GetRule()
+        {
+            return lblShowRule;
+        }
+
         public void setShowRule(string character)
         {
             switch (character)

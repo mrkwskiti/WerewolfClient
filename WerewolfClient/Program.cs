@@ -20,7 +20,7 @@ namespace WerewolfClient
             MainForm mMainForm = new MainForm();
             mMainForm.Visible = false;
             Login mLogin = new Login(mMainForm);
-            WerewolfController mControler =  WerewolfController.GetInstance();
+            WerewolfController mControler = WerewolfController.GetInstance();
             WerewolfModel mModel = new WerewolfModel();
 
             // View -> Controller
@@ -34,7 +34,7 @@ namespace WerewolfClient
             mModel.AttachObserver(mLogin);
             mModel.AttachObserver(mMainForm);
 
-            Application.Run(mLogin);
+            Application.Run(new Rule());
         }
     }
 }

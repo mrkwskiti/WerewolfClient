@@ -34,6 +34,7 @@ namespace WerewolfClient
                     switch (rcmd.Action)
                     {
                         case RuleCommand.CommandEnum.GetRule:
+                            rm.setShowRule(cmd.Payloads["Character"]);
                         break;
                     }
                 }
