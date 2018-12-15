@@ -444,6 +444,10 @@ namespace WerewolfClient
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            WerewolfCommand wcmd = new WerewolfCommand();
+            wcmd.Action = CommandEnum.SignOut;
+            controller.ActionPerformed(wcmd);
+
             Environment.Exit(0);
         }
 

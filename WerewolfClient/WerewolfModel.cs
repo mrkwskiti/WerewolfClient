@@ -59,6 +59,8 @@ namespace WerewolfClient
             Chat = 16,
             ChatMessage = 17,
             Waiting = 18,
+            LeaveGame = 19,
+            SignOut = 20,
         }
         public const string ROLE_SEER = "Seer";
         public const string ROLE_AURA_SEER = "Aura Seer";
@@ -417,6 +419,45 @@ namespace WerewolfClient
                 _eventPayloads["Error"] = ex.ToString();
             }
             NotifyAll();
+        }
+        public void SignOut()
+        {
+            try
+            {
+                LeaveGame();
+
+                _players = _playerEP.LogoutPlayer(_player.Session);
+
+                Console.WriteLine("Logout");
+                _event = EventEnum.SignOut;
+                _eventPayloads["Success"] = TRUE;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                _event = EventEnum.SignOut;
+                _eventPayloads["Success"] = FALSE;
+                _eventPayloads["Error"] = e.ToString();
+            }
+        }
+
+        public void LeaveGame()
+        {
+            try
+            {
+                _game = _gameEP.GameSessionSessionIDDelete(_player.Session);
+
+                Console.WriteLine("Leave Game");
+                _event = EventEnum.LeaveGame;
+                _eventPayloads["Success"] = TRUE;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                _event = EventEnum.LeaveGame;
+                _eventPayloads["Success"] = FALSE;
+                _eventPayloads["Error"] = e.ToString();
+            }
         }
 
         public void Vote(string target)
