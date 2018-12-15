@@ -15,10 +15,10 @@ namespace WerewolfClient
 
         public new CommandEnum Action { get; set; }
     }
-    class RuleController : Controller
+    public class RuleController : Controller
     {
       
-        private RuleController()
+        public RuleController()
         {
             
         }

@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rule));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.panelleft = new System.Windows.Forms.Panel();
+            this.btnSeer = new System.Windows.Forms.Button();
+            this.btngunner = new System.Windows.Forms.Button();
+            this.btnAura_seer = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.buttonwerewolf = new System.Windows.Forms.Button();
+            this.btnpriest = new System.Windows.Forms.Button();
+            this.btnHead_humter = new System.Windows.Forms.Button();
+            this.btnBodyguard = new System.Windows.Forms.Button();
+            this.btnMedium = new System.Windows.Forms.Button();
+            this.btnFool = new System.Windows.Forms.Button();
+            this.btnLailer = new System.Windows.Forms.Button();
+            this.btnDoctor = new System.Windows.Forms.Button();
+            this.btnWerewolf_seer = new System.Windows.Forms.Button();
+            this.btnWerewolf_shaman = new System.Windows.Forms.Button();
+            this.btnAlpha_werewolf = new System.Windows.Forms.Button();
+            this.btnWerewolf = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.panelleft = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -66,21 +66,21 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.panelleft);
-            this.panel3.Controls.Add(this.button15);
-            this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.button14);
+            this.panel3.Controls.Add(this.btnSeer);
+            this.panel3.Controls.Add(this.btngunner);
+            this.panel3.Controls.Add(this.btnAura_seer);
             this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button13);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.button12);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.buttonwerewolf);
+            this.panel3.Controls.Add(this.btnpriest);
+            this.panel3.Controls.Add(this.btnHead_humter);
+            this.panel3.Controls.Add(this.btnBodyguard);
+            this.panel3.Controls.Add(this.btnMedium);
+            this.panel3.Controls.Add(this.btnFool);
+            this.panel3.Controls.Add(this.btnLailer);
+            this.panel3.Controls.Add(this.btnDoctor);
+            this.panel3.Controls.Add(this.btnWerewolf_seer);
+            this.panel3.Controls.Add(this.btnWerewolf_shaman);
+            this.panel3.Controls.Add(this.btnAlpha_werewolf);
+            this.panel3.Controls.Add(this.btnWerewolf);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 82);
@@ -88,48 +88,56 @@
             this.panel3.Size = new System.Drawing.Size(1273, 728);
             this.panel3.TabIndex = 3;
             // 
-            // button15
+            // panelleft
             // 
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(18, 228);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(243, 78);
-            this.button15.TabIndex = 15;
-            this.button15.Text = "    seer";
-            this.button15.UseVisualStyleBackColor = true;
+            this.panelleft.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelleft.Location = new System.Drawing.Point(567, 0);
+            this.panelleft.Name = "panelleft";
+            this.panelleft.Size = new System.Drawing.Size(706, 728);
+            this.panelleft.TabIndex = 16;
             // 
-            // button9
+            // btnSeer
             // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Britannic Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button9.Location = new System.Drawing.Point(18, 638);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(243, 73);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "   Gunner";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnSeer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeer.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSeer.Image = ((System.Drawing.Image)(resources.GetObject("btnSeer.Image")));
+            this.btnSeer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeer.Location = new System.Drawing.Point(18, 228);
+            this.btnSeer.Name = "btnSeer";
+            this.btnSeer.Size = new System.Drawing.Size(243, 78);
+            this.btnSeer.TabIndex = 15;
+            this.btnSeer.Text = "    seer";
+            this.btnSeer.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // btngunner
             // 
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Britannic Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(267, 230);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(236, 76);
-            this.button14.TabIndex = 14;
-            this.button14.Text = "Aura seer";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button14.UseVisualStyleBackColor = true;
+            this.btngunner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngunner.Font = new System.Drawing.Font("Britannic Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngunner.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btngunner.Image = ((System.Drawing.Image)(resources.GetObject("btngunner.Image")));
+            this.btngunner.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btngunner.Location = new System.Drawing.Point(18, 638);
+            this.btngunner.Name = "btngunner";
+            this.btngunner.Size = new System.Drawing.Size(243, 73);
+            this.btngunner.TabIndex = 9;
+            this.btngunner.Text = "   Gunner";
+            this.btngunner.UseVisualStyleBackColor = true;
+            // 
+            // btnAura_seer
+            // 
+            this.btnAura_seer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAura_seer.Font = new System.Drawing.Font("Britannic Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAura_seer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAura_seer.Image = ((System.Drawing.Image)(resources.GetObject("btnAura_seer.Image")));
+            this.btnAura_seer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAura_seer.Location = new System.Drawing.Point(267, 230);
+            this.btnAura_seer.Name = "btnAura_seer";
+            this.btnAura_seer.Size = new System.Drawing.Size(236, 76);
+            this.btnAura_seer.TabIndex = 14;
+            this.btnAura_seer.Text = "Aura seer";
+            this.btnAura_seer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAura_seer.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -146,166 +154,164 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // btnpriest
             // 
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Britannic Bold", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button13.Location = new System.Drawing.Point(17, 398);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(244, 76);
-            this.button13.TabIndex = 13;
-            this.button13.Text = "   Priest";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnpriest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnpriest.Font = new System.Drawing.Font("Britannic Bold", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpriest.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnpriest.Image = ((System.Drawing.Image)(resources.GetObject("btnpriest.Image")));
+            this.btnpriest.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnpriest.Location = new System.Drawing.Point(17, 398);
+            this.btnpriest.Name = "btnpriest";
+            this.btnpriest.Size = new System.Drawing.Size(244, 76);
+            this.btnpriest.TabIndex = 13;
+            this.btnpriest.Text = "   Priest";
+            this.btnpriest.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnHead_humter
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.Location = new System.Drawing.Point(18, 480);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(243, 74);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "        Head hunter";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnHead_humter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHead_humter.Font = new System.Drawing.Font("Britannic Bold", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHead_humter.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnHead_humter.Image = ((System.Drawing.Image)(resources.GetObject("btnHead_humter.Image")));
+            this.btnHead_humter.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnHead_humter.Location = new System.Drawing.Point(18, 480);
+            this.btnHead_humter.Name = "btnHead_humter";
+            this.btnHead_humter.Size = new System.Drawing.Size(243, 74);
+            this.btnHead_humter.TabIndex = 6;
+            this.btnHead_humter.Text = "        Head hunter";
+            this.btnHead_humter.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnBodyguard
             // 
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Britannic Bold", 15.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button12.Location = new System.Drawing.Point(18, 312);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(243, 80);
-            this.button12.TabIndex = 12;
-            this.button12.Text = "Bodyguard";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnBodyguard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBodyguard.Font = new System.Drawing.Font("Britannic Bold", 15.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBodyguard.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBodyguard.Image = ((System.Drawing.Image)(resources.GetObject("btnBodyguard.Image")));
+            this.btnBodyguard.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnBodyguard.Location = new System.Drawing.Point(18, 312);
+            this.btnBodyguard.Name = "btnBodyguard";
+            this.btnBodyguard.Size = new System.Drawing.Size(243, 80);
+            this.btnBodyguard.TabIndex = 12;
+            this.btnBodyguard.Text = "Bodyguard";
+            this.btnBodyguard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBodyguard.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnMedium
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(267, 398);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(236, 76);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "     Medium";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnMedium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedium.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedium.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnMedium.Image = ((System.Drawing.Image)(resources.GetObject("btnMedium.Image")));
+            this.btnMedium.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedium.Location = new System.Drawing.Point(267, 398);
+            this.btnMedium.Name = "btnMedium";
+            this.btnMedium.Size = new System.Drawing.Size(236, 76);
+            this.btnMedium.TabIndex = 7;
+            this.btnMedium.Text = "     Medium";
+            this.btnMedium.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnFool
             // 
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button11.Location = new System.Drawing.Point(18, 560);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(243, 72);
-            this.button11.TabIndex = 11;
-            this.button11.Text = "   Fool";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnFool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFool.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFool.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFool.Image = ((System.Drawing.Image)(resources.GetObject("btnFool.Image")));
+            this.btnFool.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnFool.Location = new System.Drawing.Point(18, 560);
+            this.btnFool.Name = "btnFool";
+            this.btnFool.Size = new System.Drawing.Size(243, 72);
+            this.btnFool.TabIndex = 11;
+            this.btnFool.Text = "   Fool";
+            this.btnFool.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btnLailer
             // 
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button10.Location = new System.Drawing.Point(267, 560);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(236, 72);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "   Jailer";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.btnLailer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLailer.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLailer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLailer.Image = ((System.Drawing.Image)(resources.GetObject("btnLailer.Image")));
+            this.btnLailer.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnLailer.Location = new System.Drawing.Point(267, 560);
+            this.btnLailer.Name = "btnLailer";
+            this.btnLailer.Size = new System.Drawing.Size(236, 72);
+            this.btnLailer.TabIndex = 10;
+            this.btnLailer.Text = "   Jailer";
+            this.btnLailer.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnDoctor
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.Location = new System.Drawing.Point(267, 312);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(236, 80);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "   Doctor";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoctor.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctor.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDoctor.Image = ((System.Drawing.Image)(resources.GetObject("btnDoctor.Image")));
+            this.btnDoctor.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDoctor.Location = new System.Drawing.Point(267, 312);
+            this.btnDoctor.Name = "btnDoctor";
+            this.btnDoctor.Size = new System.Drawing.Size(236, 80);
+            this.btnDoctor.TabIndex = 5;
+            this.btnDoctor.Text = "   Doctor";
+            this.btnDoctor.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnWerewolf_seer
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.Location = new System.Drawing.Point(267, 138);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(236, 84);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "werewolf seer";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnWerewolf_seer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWerewolf_seer.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWerewolf_seer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnWerewolf_seer.Image = ((System.Drawing.Image)(resources.GetObject("btnWerewolf_seer.Image")));
+            this.btnWerewolf_seer.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnWerewolf_seer.Location = new System.Drawing.Point(267, 138);
+            this.btnWerewolf_seer.Name = "btnWerewolf_seer";
+            this.btnWerewolf_seer.Size = new System.Drawing.Size(236, 84);
+            this.btnWerewolf_seer.TabIndex = 4;
+            this.btnWerewolf_seer.Text = "werewolf seer";
+            this.btnWerewolf_seer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnWerewolf_seer.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnWerewolf_shaman
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.Location = new System.Drawing.Point(267, 53);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(236, 79);
-            this.button3.TabIndex = 3;
-            this.button3.Text = " werewolf shaman";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnWerewolf_shaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWerewolf_shaman.Font = new System.Drawing.Font("Britannic Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWerewolf_shaman.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnWerewolf_shaman.Image = ((System.Drawing.Image)(resources.GetObject("btnWerewolf_shaman.Image")));
+            this.btnWerewolf_shaman.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnWerewolf_shaman.Location = new System.Drawing.Point(267, 53);
+            this.btnWerewolf_shaman.Name = "btnWerewolf_shaman";
+            this.btnWerewolf_shaman.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnWerewolf_shaman.Size = new System.Drawing.Size(236, 79);
+            this.btnWerewolf_shaman.TabIndex = 3;
+            this.btnWerewolf_shaman.Text = " werewolf shaman";
+            this.btnWerewolf_shaman.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnWerewolf_shaman.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAlpha_werewolf
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(18, 138);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(243, 84);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Alpha werewolf";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAlpha_werewolf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlpha_werewolf.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlpha_werewolf.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAlpha_werewolf.Image = ((System.Drawing.Image)(resources.GetObject("btnAlpha_werewolf.Image")));
+            this.btnAlpha_werewolf.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAlpha_werewolf.Location = new System.Drawing.Point(18, 138);
+            this.btnAlpha_werewolf.Name = "btnAlpha_werewolf";
+            this.btnAlpha_werewolf.Size = new System.Drawing.Size(243, 84);
+            this.btnAlpha_werewolf.TabIndex = 2;
+            this.btnAlpha_werewolf.Text = "Alpha werewolf";
+            this.btnAlpha_werewolf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlpha_werewolf.UseVisualStyleBackColor = true;
             // 
-            // buttonwerewolf
+            // btnWerewolf
             // 
-            this.buttonwerewolf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonwerewolf.Font = new System.Drawing.Font("Britannic Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonwerewolf.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonwerewolf.Image = ((System.Drawing.Image)(resources.GetObject("buttonwerewolf.Image")));
-            this.buttonwerewolf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonwerewolf.Location = new System.Drawing.Point(17, 53);
-            this.buttonwerewolf.Name = "buttonwerewolf";
-            this.buttonwerewolf.Size = new System.Drawing.Size(244, 79);
-            this.buttonwerewolf.TabIndex = 1;
-            this.buttonwerewolf.Text = "       werewolf";
-            this.buttonwerewolf.UseVisualStyleBackColor = true;
-            this.buttonwerewolf.Click += new System.EventHandler(this.buttonwerewolf_Click);
+            this.btnWerewolf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWerewolf.Font = new System.Drawing.Font("Britannic Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWerewolf.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnWerewolf.Image = ((System.Drawing.Image)(resources.GetObject("btnWerewolf.Image")));
+            this.btnWerewolf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWerewolf.Location = new System.Drawing.Point(17, 53);
+            this.btnWerewolf.Name = "btnWerewolf";
+            this.btnWerewolf.Size = new System.Drawing.Size(244, 79);
+            this.btnWerewolf.TabIndex = 1;
+            this.btnWerewolf.Text = "       werewolf";
+            this.btnWerewolf.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -329,15 +335,6 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "How to play";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panelleft
-            // 
-            this.panelleft.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelleft.Location = new System.Drawing.Point(567, 0);
-            this.panelleft.Name = "panelleft";
-            this.panelleft.Size = new System.Drawing.Size(706, 728);
-            this.panelleft.TabIndex = 16;
             // 
             // Rule
             // 
@@ -350,7 +347,6 @@
             this.Controls.Add(this.panel2);
             this.Name = "Rule";
             this.Text = "Rule";
-            this.Load += new System.EventHandler(this.Rule_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -362,22 +358,22 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button buttonwerewolf;
+        private System.Windows.Forms.Button btnWerewolf;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btnSeer;
+        private System.Windows.Forms.Button btngunner;
+        private System.Windows.Forms.Button btnAura_seer;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnpriest;
+        private System.Windows.Forms.Button btnHead_humter;
+        private System.Windows.Forms.Button btnBodyguard;
+        private System.Windows.Forms.Button btnMedium;
+        private System.Windows.Forms.Button btnFool;
+        private System.Windows.Forms.Button btnLailer;
+        private System.Windows.Forms.Button btnDoctor;
+        private System.Windows.Forms.Button btnWerewolf_seer;
+        private System.Windows.Forms.Button btnWerewolf_shaman;
+        private System.Windows.Forms.Button btnAlpha_werewolf;
         private System.Windows.Forms.Panel panelleft;
     }
 }

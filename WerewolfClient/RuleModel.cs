@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WerewolfClient
 {
-    class RuleModel : Model
+    public class RuleModel : Model
     {
         public const string SEER = "Seer";
         public const string AURA_SEER = "Aura Seer";

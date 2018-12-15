@@ -12,44 +12,35 @@ namespace WerewolfClient
 {
     public partial class Rule : Form, View
     {
+        private Model model;
         private RuleController controller;
         public Rule()
         {
             InitializeComponent();
+            setModel(new RuleModel());
+            setController(new RuleController());
+            model.AttachObserver(this);
+            controller.AddModel(model);
         }
         public void Notify(Model m)
         {
 
         }
 
-        public void setController(Controller c)
+        private void setModel(Model m)
+        {
+            model = (RuleModel)m;
+        }
+
+        private void setController(Controller c)
         {
             controller = (RuleController)c;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnGetRule_click(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Rule_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonwerewolf_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
