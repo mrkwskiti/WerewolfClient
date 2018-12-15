@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace WerewolfClient
 {
+    public class RuleCommand : Command
+    {
+        public new enum CommandEnum
+        {
+            GetRule = 1
+        };
+    }
     class RuleController : Controller
     {
+      
         private RuleController()
         {
-
+            
         }
     }
 }
